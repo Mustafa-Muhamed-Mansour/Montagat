@@ -6,9 +6,8 @@
 - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Stores UI-related data that isn't destroyed on UI changes.
 - [Retrofit](https://github.com/square/retrofit) : Used for REST api communication.
 - [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) : A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
-- [MVI](https://amsterdamstandard.com/story/modern-android-architecture-with-mvi-design-pattern) : streamlines the process of creating and developing applications by introducing a reactive approach. In a way, this pattern is a mixture of MVP and MVVM adapted to reactive programming.
 - [Shimmer](https://facebook.github.io/shimmer-android/) : used the Shimmer effect to indicate RecyclerView while loading the new Montagat.
-
+- [MVI](https://amsterdamstandard.com/story/modern-android-architecture-with-mvi-design-pattern) : streamlines the process of creating and developing applications by introducing a reactive approach. In a way, this pattern is a mixture of MVP and MVVM adapted to reactive programming.
 
 
 
