@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/montagatDetailsFragment"
-        android:name="com.montagat.montagat_detail.MontagatDetailsFragment"
+        android:name="com.montagat.montagatDetail.MontagatDetailsFragment"
         android:label="MontagatDetailsFragment"
         tools:layout="@layout/fragment_montagat_details">
         <argument

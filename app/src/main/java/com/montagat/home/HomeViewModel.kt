@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.montagat.intent.MontagIntent
 import com.montagat.repository.MontagRepository
-import com.montagat.view_state.MontagViewState
+import com.montagat.viewState.MontagViewState
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

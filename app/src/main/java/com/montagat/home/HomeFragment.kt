@@ -17,7 +17,7 @@ import com.montagat.databinding.FragmentHomeBinding
 import com.montagat.intent.MontagIntent
 import com.montagat.interfaces.DetailsMontagat
 import com.montagat.model.MontagModel
-import com.montagat.view_state.MontagViewState
+import com.montagat.viewState.MontagViewState
 import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment(), DetailsMontagat {
@@ -56,7 +56,7 @@ class HomeFragment : Fragment(), DetailsMontagat {
     }
 
     private fun getStateFromViewModel() {
-        lifecycleScope.launch  {
+        lifecycleScope.launch {
             viewModel.state.collect {
                 when (it) {
                     is MontagViewState.Idle -> {
@@ -83,8 +83,17 @@ class HomeFragment : Fragment(), DetailsMontagat {
                         montagAdapter.differ.submitList(it.montag.toList())
                         binding.rVMontagat.apply {
                             this.adapter = montagAdapter
-                            this.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-                            this.addItemDecoration(DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL))
+                            this.layoutManager = LinearLayoutManager(
+                                requireContext(),
+                                LinearLayoutManager.VERTICAL,
+                                false
+                            )
+                            this.addItemDecoration(
+                                DividerItemDecoration(
+                                    requireContext(),
+                                    DividerItemDecoration.VERTICAL
+                                )
+                            )
                         }
                     }
 

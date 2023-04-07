@@ -1,4 +1,4 @@
-package com.montagat.montagat_detail
+package com.montagat.montagatDetail
 
 import android.annotation.SuppressLint
 import android.graphics.Paint

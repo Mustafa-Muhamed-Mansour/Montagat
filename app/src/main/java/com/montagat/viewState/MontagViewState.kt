@@ -1,4 +1,4 @@
-package com.montagat.view_state
+package com.montagat.viewState
 
 import com.montagat.model.MontagModel
 
