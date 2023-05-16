@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import coil.load
+import coil.transform.RoundedCornersTransformation
 import com.montagat.databinding.ItemMontagBinding
 import com.montagat.interfaces.DetailsMontagat
 import com.montagat.model.MontagModel
@@ -33,10 +34,15 @@ class MontagAdapter(private val detailsMontagat: DetailsMontagat) : RecyclerView
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MontagVH, position: Int) {
         differ.currentList[position].apply {
-            Glide
-                .with(holder.itemView.context)
-                .load(this.image)
-                .into(holder.bind.imgItemMontag)
+//            Glide
+//                .with(holder.itemView.context)
+//                .load(this.image)
+//                .into(holder.bind.imgItemMontag)
+            holder.bind.imgItemMontag.load(this.image) {
+                this.crossfade(3000)
+//                this.crossfade(true)
+//                this.transformations(RoundedCornersTransformation(10f))
+            }
 
             holder.bind.txtNameItemMontag.text = this.name
             holder.bind.txtPriceItemMontag.text = "${this.price} EGP"

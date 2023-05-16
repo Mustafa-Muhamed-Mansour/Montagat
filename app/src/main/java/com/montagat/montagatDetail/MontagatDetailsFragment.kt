@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
+import coil.load
 import com.montagat.databinding.FragmentMontagatDetailsBinding
 import com.montagat.model.MontagModel
 
@@ -38,10 +38,14 @@ class MontagatDetailsFragment : Fragment() {
 
     @SuppressLint("SetTextI18n")
     private fun viewViews() {
-        Glide
-            .with(requireContext())
-            .load(montagDetails.image)
-            .into(binding.imgMontag)
+//        Glide
+//            .with(requireContext())
+//            .load(montagDetails.image)
+//            .into(binding.imgMontag)
+        binding.imgMontag.load(montagDetails.image) {
+            this.crossfade(3000)
+//            this.transformations()
+        }
 
         binding.txtNameMontag.text = montagDetails.name
         binding.txtDescriptionMontag.text = montagDetails.description
